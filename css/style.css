@@ -31,22 +31,22 @@ header * {
   background-color: transparent; /* para ficar com o fundo do background image*/
 }
 
-.fixed-logo {
+.logo-container {
   display: flex;
 }
 
 /*! Alterar */
-.fixed-logo img {
+.logo-container img {
   width: 30px;
   height: 30px;
 }
 
 .logo-name {
   padding-inline: 10px;
-  font-size: 25px;
+  font-size: 1.4em;
 }
 
-.fixed-menu {
+.main-menu {
   display: flex;
   flex-direction: row;
   justify-items: right;
@@ -58,7 +58,7 @@ a {
   text-decoration: none; /* tira o sublinhado do link */
   color: #fff;
   padding-right: 20px;
-  font-size: 23px;
+  font-size: 1.3em;
 }
 
 a:hover {
@@ -128,7 +128,7 @@ h2 {
 }
 
 h1 {
-  font-size: 120px;
+  font-size: 5em;
   font-weight: 700;
 }
 
@@ -137,6 +137,8 @@ h1 {
 .main-title {
   font-family: 'Roboto', sans-serif;
   color: #fff;
+
+  font-size: 6em;
 }
 
 /** texto abaixo do título */
@@ -189,25 +191,17 @@ h1 {
   align-items: center;
 }
 
-/* .featured-services {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  flex-wrap: wrap;
-} */
-
-
-/* .title-main-services {
-
-} */
-/* .main-services {
-  padding: 150px;
-} */
-
 img {
   height: 350px;
   width: 400px;
 }
+
+/*! video youtube */
+/* 
+.video-youtube iframe {
+  width: 100%;
+  height: 400px;
+} */
 
 /*! formulário da página Contatos */
 form {
@@ -240,7 +234,6 @@ footer {
 .social-icons img {
   width: 32px;
   height: 32px;
-
 }
 
 .social-icons li {
@@ -254,3 +247,31 @@ footer {
 footer p {
   font-size: 15px;
 }
+
+
+/* @media (max-width: 768px) {
+  /* estilos para dispositivos móveis aqui */
+  /* .container-logo {
+    max-width: 100%;
+  }
+
+  .main-menu {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+  .main-title {
+    font-size: 2em;
+  }
+  
+  .container-main-services {
+    flex-direction: column;
+  }
+
+  .featured-services {
+    margin-bottom: 1em;
+  }
+  .video-youtube iframe {
+    height: 250px;
+  }
+} */ 
