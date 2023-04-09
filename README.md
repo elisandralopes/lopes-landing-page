@@ -6,7 +6,6 @@ Este repositório contém o código para a landing page do site da Lopes & Cia, 
 ## Tecnologias Utilizadas 
 * HTML5 
 * CSS3 
-* JavaScript
 ## Autora
 
 - [@elisandralopes](https://www.github.com/elisandralopes)
