@@ -21,8 +21,10 @@ header {
   align-items: center;
 
   width: 100%;
-  background-color: transparent;
-  color: #fff;
+  color: #f2f2f2;
+  background-color: #8e8e8e;
+  /* background-color: transparent; */
+  /* color: #434343; */
 
   padding: 10px 20px 7px;
 }
@@ -35,7 +37,6 @@ header * {
   display: flex;
 }
 
-/*! Alterar */
 .logo-container img {
   width: 30px;
   height: 30px;
@@ -66,12 +67,23 @@ a:hover {
   cursor: pointer; /* muda o cursor do mouse para indicar que o link é clicável */
 }
 
-/** seções */
+/** main / seções */
+
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-items: center;
+}
 section {
   display: flex;
   justify-content: center;
-  /* align-items: flex-start; */
-  /* flex-wrap: wrap; */
+  flex-direction: column;
+  align-items: center;
+
+  width: 100%;
+
+  padding: 32px;
 }
 
 hr {
@@ -127,10 +139,22 @@ h2 {
   background-color: transparent; /* transparent para não ficar com fundo diverso do background image colocado */
 }
 
-h1 {
+/* h1 {
   font-size: 5em;
   font-weight: 700;
+} */
+
+h2 {
+  font-size: 2em;
+  font-weight: 500;
+  padding: 32px 0;
 }
+
+.title {
+  font-weight: 200;
+  font-size: 5em; 
+}
+
 
 /** Título da página principal */
 
@@ -174,7 +198,10 @@ h1 {
   font-weight: 200;
 }
 
-/*! seção principais serviços */
+
+
+/** seção serviços principais  */
+
 .main-services * {
   background-color: #006684;
 
@@ -187,8 +214,18 @@ h1 {
 
 .container-main-services {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   align-items: center;
+  justify-content: center;
+  flex-wrap: nowrap;
+}
+.service-card {
+  padding: 20px;
+}
+.container-main-services img {
+  height: 350px;
+  width: 300px;
+  object-fit: cover;
 }
 
 img {
@@ -196,7 +233,57 @@ img {
   width: 400px;
 }
 
+button {
+  border-radius: 3px;
+  padding: 5px;
+  cursor: pointer;
+
+  width: 100x;
+}
+
+/** seção assessoramento */
+
+section.assessoramento {
+  display: flex;
+
+  padding: 32px;
+}
+
+.container-assessoramento {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+}
+
+.assessoramento img {
+  height: 250px;
+  width: 225px;
+  object-fit: cover;
+}
+
+.assessoramento-card text {
+}
+
 /*! video youtube */
+
+section.video {
+  display: flex;
+  flex-direction: column;
+}
+/* .video {
+  display: flex;
+  flex-direction: column;
+} */
+
+.container-video {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.video p {
+  font-size: 1.5rem;
+}
 /* 
 .video-youtube iframe {
   width: 100%;
@@ -209,6 +296,31 @@ form {
   /* margin: 0 auto;
   max-width: 600px; */
 }
+
+/** Página Serviços */
+
+.services {
+  display: flex;
+}
+
+.container-service {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding-inline: 60px;
+}
+
+.services img {
+  height: 400px;
+  width: 300px;
+  object-fit: cover;
+}
+
+.service-image {
+  display: flex;
+}
+
+/** */
 
 form label,
 form input {
@@ -248,10 +360,9 @@ footer p {
   font-size: 15px;
 }
 
-
 /* @media (max-width: 768px) {
   /* estilos para dispositivos móveis aqui */
-  /* .container-logo {
+/* .container-logo {
     max-width: 100%;
   }
 
@@ -274,4 +385,4 @@ footer p {
   .video-youtube iframe {
     height: 250px;
   }
-} */ 
+} */
