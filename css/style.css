@@ -6,25 +6,44 @@
   background-color: #f2f2f2;
 }
 
-/* body */
+/** body */
 body {
   width: 100vw;
   height: 100vh;
+  font-family: 'Roboto', sans-serif;
 }
 
-/* cabeçalho */
-
+/** cabeçalho logo e menu */
 header {
   display: flex;
-  flex-direction: row;
+  position: fixed; /* cabeçalho fixo na página, mesmo com o scroll */
+  justify-content: space-between;
+  align-items: center;
+
   width: 100%;
-  /* background-color: #4f474e; */
+  background-color: transparent;
+  color: #fff;
+
+  padding: 10px 20px 7px;
 }
 
+header * {
+  background-color: transparent; /* para ficar com o fundo do background image*/
+}
+
+.fixed-logo {
+  display: flex;
+}
+
+/*! Alterar */
 .fixed-logo img {
   width: 30px;
   height: 30px;
-  display: inline-block;
+}
+
+.logo-name {
+  padding-inline: 10px;
+  font-size: 25px;
 }
 
 .fixed-menu {
@@ -35,24 +54,51 @@ header {
   list-style: none;
 }
 
-.fixed-menu li {
-  padding-left: 20px;
+a {
+  text-decoration: none; /* tira o sublinhado do link */
+  color: #fff;
+  padding-right: 20px;
+  font-size: 23px;
 }
 
-/* seçõs principais (primeira de cada página) */
+a:hover {
+  color: #006684; /* altera a cor do texto */
+  cursor: pointer; /* muda o cursor do mouse para indicar que o link é clicável */
+}
+
+/** seções */
+section {
+  display: flex;
+  justify-content: center;
+  /* align-items: flex-start; */
+  /* flex-wrap: wrap; */
+}
+
+hr {
+  width: 70%;
+}
+
+/** seçõs principais (primeira de cada página) */
 
 .banner-home,
 .banner-services,
 .banner-contact,
 .banner-local {
   width: 100%;
-  height: 300px;
+  height: 475px;
   text-align: center;
   padding: 20px;
+
+  display: flex;
+  justify-content: center;
+  /* align-content: center; */
+  align-items: center;
+  flex-direction: column;
 }
 
 .banner-home {
   background-image: url('../images/backgroung-home.jpg');
+  background-repeat: no-repeat;
   background-size: cover; /* ajusta o tamanho da imagem para preencher toda a área */
   background-position: center; /* centraliza a imagem no centro da seção */
 }
@@ -75,40 +121,95 @@ header {
   background-position: center;
 }
 
-/* transparent para não ficar com fundo diverso do background image colocado */
+/** Títulos */
 h1,
 h2 {
-  background-color: transparent;
+  background-color: transparent; /* transparent para não ficar com fundo diverso do background image colocado */
 }
 
 h1 {
-  font-size: 75px;
+  font-size: 120px;
+  font-weight: 700;
 }
 
-.banner-home p {
+/** Título da página principal */
+
+.main-title {
+  font-family: 'Roboto', sans-serif;
+  color: #fff;
+}
+
+/** texto abaixo do título */
+.text-subtitle {
   background-color: transparent;
+  color: #fff;
+  font-size: 25px;
+  padding-top: 25px;
 }
 
-/* seções secundárias */
+/** Títulos outras páginas */
+
+.title {
+  font-weight: 200;
+}
+
+/** seções de apresentação */
 
 .presentation {
   width: 100%;
-  height: 300px;
+  height: 400px;
   padding: 20px;
   background-color: #006684;
+  color: #fff;
+
+  display: flex;
+  align-items: center;
+  text-align: center;
+}
+.presentation h2 {
+  padding: 150px;
+  font-size: 40px;
+  font-weight: 200;
 }
 
-.presentation p {
-  text-align: center;
-  background-color: transparent;
+/*! seção principais serviços */
+.main-services * {
+  background-color: #006684;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  width: 100%;
 }
+
+.container-main-services {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* .featured-services {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  flex-wrap: wrap;
+} */
+
+
+/* .title-main-services {
+
+} */
+/* .main-services {
+  padding: 150px;
+} */
 
 img {
-  height: 30%;
-  width: 30%;
+  height: 350px;
+  width: 400px;
 }
 
-/* formulário da página Contatos */
+/*! formulário da página Contatos */
 form {
   display: block; /* block -> cada item ficar um abaixo do outro */
   /* margin: 0 auto;
@@ -121,9 +222,35 @@ form input {
   margin-bottom: 10px; /* Adicione uma margem inferior para espaçar cada item do formulário */
 }
 
-/* rodapé  */
+/** rodapé  */
+
+footer {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+
+  padding-top: 60px;
+}
+
+.social-icons {
+  display: flex;
+  padding-bottom: 13px;
+}
 
 .social-icons img {
-  width: 30px;
-  height: 30px;
+  width: 32px;
+  height: 32px;
+
+}
+
+.social-icons li {
+  list-style: none;
+}
+
+.social-icons li:hover {
+  cursor: pointer;
+}
+
+footer p {
+  font-size: 15px;
 }
