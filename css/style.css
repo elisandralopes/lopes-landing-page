@@ -22,7 +22,7 @@ header {
 
   width: 100%;
   color: #f2f2f2;
-  background-color: #8e8e8e;
+  background-color: #7171716d;
   /* background-color: transparent; */
   /* color: #434343; */
 
@@ -82,8 +82,13 @@ section {
   align-items: center;
 
   width: 100%;
-
   padding: 32px;
+}
+
+div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 hr {
@@ -150,12 +155,6 @@ h2 {
   padding: 32px 0;
 }
 
-.title {
-  font-weight: 200;
-  font-size: 5em; 
-}
-
-
 /** Título da página principal */
 
 .main-title {
@@ -174,9 +173,9 @@ h2 {
 }
 
 /** Títulos outras páginas */
-
 .title {
   font-weight: 200;
+  font-size: 5em;
 }
 
 /** seções de apresentação */
@@ -198,8 +197,6 @@ h2 {
   font-weight: 200;
 }
 
-
-
 /** seção serviços principais  */
 
 .main-services * {
@@ -210,6 +207,11 @@ h2 {
   align-items: center;
 
   width: 100%;
+}
+
+.main-services {
+  border: 1px solid red;
+  background-color: #006684;
 }
 
 .container-main-services {
@@ -239,6 +241,11 @@ button {
   cursor: pointer;
 
   width: 100x;
+}
+
+/*! alterar */
+button:hover {
+  background-color: #00658480;
 }
 
 /** seção assessoramento */
@@ -292,9 +299,33 @@ section.video {
 
 /*! formulário da página Contatos */
 form {
-  display: block; /* block -> cada item ficar um abaixo do outro */
-  /* margin: 0 auto;
-  max-width: 600px; */
+  display: flex;
+  flex-direction: column;
+
+  width: 37%;
+}
+
+form input {
+  padding: 10px;
+  margin-bottom: 10px;
+
+  border-radius: 8px;
+}
+
+form textarea {
+  margin-bottom: 15px;
+  border-radius: 8px;
+}
+
+form.input-enviar {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-items: center;
+}
+
+form input.enviar {
+  width: 20%;
 }
 
 /** Página Serviços */
@@ -308,6 +339,12 @@ form {
   flex-direction: row;
   align-items: center;
   padding-inline: 60px;
+}
+
+.service-text {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
 }
 
 .services img {
